@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Services</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
 
     header {
       background-color: #333;
-      color: #ffffff;
+      color: #fff;
       padding: 20px;
       text-align: center;
     }
@@ -21,7 +21,6 @@
       border-radius: 50%;
       margin-right: 60%;
 }
-
     nav {
       background-color: #f2f2f2;
       padding: 20px;
@@ -50,12 +49,48 @@
       text-align: center;
     }
 
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .service-card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .service-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      margin-bottom: 10px;
+    }
+
+    .service-card button {
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .service-card button:hover {
+      background-color: #555;
+    }
+
     footer {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
-
     }
   </style>
   <link rel="icon" type="image/png" href="favicon.jpeg">
@@ -65,8 +100,8 @@
     <div class="logo">
       <img src="Logo.png" alt="Gize Gebeya logo">
   </div>
-    <h1>Welcome to Gize Gebeya Website</h1>
-    <p>Providing Quality Services Since 2015</p>
+    <h1>Services</h1>
+    <p>Explore Our Services</p>
   </header>
 
   <nav>
@@ -80,8 +115,26 @@
   </nav>
 
   <section>
-    <h2>Welcome to Our Home Page</h2>
-    <p>UNLEASH YOUR INVESTMENT POTENTIAL.<BR>Find your dream house And car with us.</p>
+    <div class="service-card">
+      <img src="service1.jpg" alt="Service 1">
+      <h2>Service 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="service-card">
+      <img src="service2.jpg" alt="Service 2">
+      <h2>Service 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="service-card">
+      <img src="service3.jpg" alt="Service 3">
+      <h2>Service 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button>Learn More</button>
+    </div>
   </section>
 
   <footer>

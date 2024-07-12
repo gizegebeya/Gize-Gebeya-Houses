@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Contact Us</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
 
     header {
       background-color: #333;
-      color: #ffffff;
+      color: #fff;
       padding: 20px;
       text-align: center;
     }
@@ -21,7 +21,6 @@
       border-radius: 50%;
       margin-right: 60%;
 }
-
     nav {
       background-color: #f2f2f2;
       padding: 20px;
@@ -50,42 +49,87 @@
       text-align: center;
     }
 
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+
     footer {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
-
     }
   </style>
-  <link rel="icon" type="image/png" href="favicon.jpeg">
+  
+<link rel="icon" type="image/png" href="favicon.jpeg">
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="Logo.png" alt="Gize Gebeya logo">
-  </div>
-    <h1>Welcome to Gize Gebeya Website</h1>
-    <p>Providing Quality Services Since 2015</p>
+    <h1>Contact Us</h1>
+    <p>Get in Touch With Us</p>
   </header>
-
+  <div class="logo">
+    <img src="Logo.png" alt="Gize Gebeya logo">
+</div>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="Products.html">Products</a></li>
-      <li><a href="Services.html">Services</a></li>
-      <li><a href="About Us.html">About Us</a></li>
-      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>Welcome to Our Home Page</h2>
-    <p>UNLEASH YOUR INVESTMENT POTENTIAL.<BR>Find your dream house And car with us.</p>
+    <div class="contact-form">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>Contact us at: Phone: +251978906766/+251973126041 | Email: gizegebeyacompany@gmail.com</p>
+    <p><!--Contact us at: 123 Main Street, City, State, ZIP | Phone: 123-456-7890 | Email: info@example.com--></p>
     <section>
       <div class="social-media">
         <a href="#" class="social-icon">YouTube</a>
