@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Houses</title>
   <style>
     body {
@@ -14,13 +16,29 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+      position: relative;
     }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
     .logo img {
       height: auto;
-      max-width: 10%;
+      max-width: 50px;
       border-radius: 50%;
-      margin-right: 60%;
-}
+      margin-right: 10px;
+    }
+
+    .logo h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
 
     nav {
       background-color: #f2f2f2;
@@ -32,11 +50,13 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 35px;
+      margin: 10px 15px;
     }
 
     nav ul li a {
@@ -46,8 +66,11 @@
     }
 
     section {
-      padding: 150px;
+      padding: 50px 20px;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .product-card {
@@ -58,17 +81,20 @@
       border-radius: 5px;
       padding: 20px;
       margin-bottom: 20px;
+      max-width: 300px;
+      margin: 20px;
     }
 
     .product-card img {
-      width: 200px;
-      height: 200px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
       margin-bottom: 10px;
     }
 
-    .product-card h2 {
+    .product-card h1 {
       margin-bottom: 10px;
+      font-size: 1.5rem;
     }
 
     .product-card p {
@@ -93,22 +119,68 @@
       padding: 20px;
       text-align: center;
     }
-    h2{text-size-adjust: 1px;
-    margin-right:750px;
+
+    .social-media img {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 5px;
+      border-radius: 50%;
     }
+
     .qr-codes-footer img {
-            width: 200px;
-            height: 250px;
-            margin: 0 10px;
-            margin-left: 1000px ;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
     }
-    .social-media img, .contact-us img {
-            width: 80px;
-            height: 80px;
-            vertical-align: middle;
-            margin-right: 5px;
-            border-radius: 50%;
-        }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .logo {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo img {
+        max-width: 30px;
+        margin-right: 0;
+      }
+
+      .logo h2 {
+        font-size: 1.2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .product-card {
+        max-width: calc(100% - 40px);
+        margin: 10px;
+      }
+
+      .product-card img {
+        max-width: 150px;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .qr-codes-footer img {
+        width: 80px;
+        height: 80px;
+      }
+    }
   </style>
   <link rel="icon" type="image/png" href="favicon.jpeg">
 </head>
@@ -116,8 +188,10 @@
   <header>
     <div class="logo">
       <img src="Logo.png" alt="Gize Gebeya logo">
-      <H2>GIZE GEBEYA</H2>
-  </div>
+      <h2>GIZE GEBEYA</h2>
+    </div>
+    <br>
+    <br>
     <h1>Houses</h1>
     <p>Choose Your Suitable Products</p>
   </header>
@@ -142,17 +216,14 @@
         lies on 97 SQM <br>
         Price=25,000,000 <br>
         Contact us at: Phone: +251978906766/+251973126041 | Email: gizegebeyacompany@gmail.com
-       </p>
-
+      </p>
       <button>Add to Cart</button>
     </div>
 
-    <div class="HOUSE 1">
-      <img src="" alt="HOUSE 1">
+    <div class="product-card">
+      <img src="HOUSE 2.jpg" alt="HOUSE 2">
       <h1>HOUSE 2</h1>
-      <p>
-
-      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <button>Add to Cart</button>
     </div>
 
@@ -174,14 +245,14 @@
         <a href="https://www.instagram.com/gizegebeya?igsh=bnVqdHNseXdqNDg=" class="social-icon"><img src="INSTAGRAM.jpg" alt="instagram"></a>
         <a href="https://www.facebook.com/profile.php?id=61550732175981" class="social-icon"><img src="FACEBOOK.png" alt="facebook"></a>
         <a href="https://t.me/gizegebeyasale" class="social-icon"><img src="Telegram channel.jpg" alt="Telegram"></a>
-   
-      <a href="gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
-      <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
-    </div>
-   <div class="qr-codes-footer">
-      <a href="https://gizegebeya.github.io/Gize-Gebeya-Customer-s-website/">
-      <img src="QR CODE FOR CUSTOMERS.png" alt="qrcodeforcustomers"></a>
-  </div>
+        <a href="mailto:gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
+        <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
+      </div>
+      <div class="qr-codes-footer">
+        <a href="https://gizegebeya.github.io/Gize-Gebeya-Customer-s-website/">
+          <img src="QR CODE FOR CUSTOMERS.png" alt="QR Code for Customers">
+        </a>
+      </div>
     </section>
   </footer>
 </body>
