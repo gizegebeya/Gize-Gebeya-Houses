@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <style>
+    /* Your provided CSS styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -15,15 +18,26 @@
       padding: 20px;
       text-align: center;
     }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
     .logo img {
       height: auto;
-      max-width: 10%;
+      max-width: 50px;
       border-radius: 50%;
-      margin-right: 60%;
-}
+      margin-right: 10px;
+    }
+
     nav {
       background-color: #f2f2f2;
-      padding: 20px;
+      padding: 10px 0; /* Adjusted padding */
       text-align: center;
     }
 
@@ -34,8 +48,8 @@
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 35px;
+      display: inline-block; /* Changed to inline-block for better spacing */
+      margin-right: 15px; /* Adjust as needed */
     }
 
     nav ul li a {
@@ -45,7 +59,7 @@
     }
 
     section {
-      padding: 150px;
+      padding: 20px;
       text-align: center;
     }
 
@@ -53,6 +67,10 @@
       max-width: 400px;
       margin: 0 auto;
       text-align: left;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .contact-form label {
@@ -61,12 +79,18 @@
     }
 
     .contact-form input[type="text"],
+    .contact-form input[type="email"],
     .contact-form textarea {
       width: 100%;
       padding: 10px;
       border-radius: 3px;
       border: 1px solid #ccc;
       margin-bottom: 20px;
+      box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    .contact-form textarea {
+      resize: vertical; /* Allow vertical resizing of textarea */
     }
 
     .contact-form button {
@@ -89,39 +113,77 @@
       padding: 20px;
       text-align: center;
     }
+
+    .social-media {
+      margin-bottom: 20px; /* Adjust as needed */
+    }
+
     .social-media a {
       color: #fff;
       text-decoration: none;
       margin: 0 10px;
     }
-    .qr-codes-footer img {
-            width: 200px;
-            height: 250px;
-            margin: 0 10px;
-            margin-left: 1000px ;
+
+    .social-media img {
+      width: 40px; /* Adjust as needed */
+      height: 40px; /* Adjust as needed */
+      vertical-align: middle;
+      margin-right: 5px;
+      border-radius: 50%;
     }
-    .social-media img, .contact-us img {
-            width: 80px;
-            height: 80px;
-            vertical-align: middle;
-            margin-right: 5px;
-            border-radius: 50%;
-        }
+
+    .qr-codes-footer img {
+      width: 100px; /* Adjust as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin: 10px; /* Adjust as needed */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .logo img {
+        max-width: 60px; /* Adjust logo size */
+      }
+
+      nav ul li {
+        display: block;
+        margin-bottom: 10px; /* Adjust spacing */
+      }
+
+      .contact-form {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .qr-codes-footer img {
+        width: 80px;
+      }
+    }
   </style>
-  
-<link rel="icon" type="image/png" href="favicon.jpeg">
-<head>
+  <link rel="icon" type="image/png" href="favicon.jpeg">
+</head>
 <body>
   <header>
+    <div class="logo">
+      <img src="Logo.png" alt="Gize Gebeya logo">
+    </div>
     <h1>Contact Us</h1>
     <p>Get in Touch With Us</p>
   </header>
-  <div class="logo">
-    <img src="Logo.png" alt="Gize Gebeya logo">
-</div>
+
   <nav>
     <ul>
-      <li><a href="Home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="aboutus.html">About Us</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="services.html">Services</a></li>
@@ -133,13 +195,13 @@
     <div class="contact-form">
       <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Enter your email">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
 
         <button type="submit">Send Message</button>
       </form>
@@ -147,25 +209,23 @@
   </section>
 
   <footer>
-    <p><!--Contact us at: 123 Main Street, City, State, ZIP | Phone: 123-456-7890 | Email: info@example.com--></p>
-      <p>Contact us at: Phone: +251978906766/+251973126041 | Email: gizegebeyacompany@gmail.com</p>
-      <section>
-        <div class="social-media">
-          <a href="#" class="social-icon"><img src="Youtube.png" alt="YouTube"></a>
-          <a href="https://www.tiktok.com/@gizegebeyasales?_r=1" class="social-icon"><img src="TIKTOK.png" alt="TIKTOK"></a>
-          <a href="#" class="social-icon"><img src="X.jpg" alt="X"></a>
-          <a href="https://www.instagram.com/gizegebeya?igsh=bnVqdHNseXdqNDg=" class="social-icon"><img src="INSTAGRAM.jpg" alt="instagram"></a>
-          <a href="https://www.facebook.com/profile.php?id=61550732175981" class="social-icon"><img src="FACEBOOK.png" alt="facebook"></a>
-          <a href="https://t.me/gizegebeyasale" class="social-icon"><img src="Telegram channel.jpg" alt="Telegram"></a>
-     
-        <a href="gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
-        <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
-      </div>
-      <div class="qr-codes-footer">
+    <p>Contact us at: Phone: +251978906766 / +251973126041 | Email: gizegebeyacompany@gmail.com</p>
+    <div class="social-media">
+      <a href="#" class="social-icon"><img src="Youtube.png" alt="YouTube"></a>
+      <a href="https://www.tiktok.com/@gizegebeyasales?_r=1" class="social-icon"><img src="TIKTOK.png" alt="TIKTOK"></a>
+      <a href="#" class="social-icon"><img src="X.jpg" alt="X"></a>
+      <a href="https://www.instagram.com/gizegebeya?igsh=bnVqdHNseXdqNDg=" class="social-icon"><img src="INSTAGRAM.jpg" alt="instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=61550732175981" class="social-icon"><img src="FACEBOOK.png" alt="facebook"></a>
+      <a href="https://t.me/gizegebeyasale" class="social-icon"><img src="Telegram channel.jpg" alt="Telegram"></a>
+      <a href="mailto:gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
+      <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
+    </div>
+    <div class="qr-codes-footer">
       <a href="https://gizegebeya.github.io/Gize-Gebeya-Customer-s-website/">
-      <img src="QR CODE FOR CUSTOMERS.png" alt="qrcodeforcustomers"></a>
-  </div>
-      </section>
-    </footer>
+        <img src="QR CODE FOR CUSTOMERS.png" alt="QR Code for Customers">
+      </a>
+    </div>
+  </footer>
+
 </body>
 </html>
