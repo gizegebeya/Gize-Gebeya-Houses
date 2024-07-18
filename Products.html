@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products</title>
   <style>
+    /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,16 +18,34 @@
       padding: 20px;
       text-align: center;
     }
+
+    .logo {
+      display: flex;
+      align-items: center; /* Align items horizontally */
+      justify-content: flex-start; /* Adjust as per original design */
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
     .logo img {
-      height: auto;
-      max-width: 10%;
+      max-width: 50px;
       border-radius: 50%;
-      margin-right: 60%;
+      margin-right: 10px;
+    }
+
+    .logo h2 {
+      margin: 0; /* Remove default margin */
+      font-size: 1.5rem; /* Adjust font size */
+    }
+
+    h2 {
+      margin: 0; /* Remove default margin */
     }
 
     nav {
       background-color: #f2f2f2;
-      padding: 20px;
+      padding: 10px 0;
       text-align: center;
     }
 
@@ -34,11 +53,12 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 35px;
+      margin-right: 15px;
     }
 
     nav ul li a {
@@ -48,8 +68,24 @@
     }
 
     section {
-      padding: 150px;
+      padding: 20px;
       text-align: center;
+    }
+
+    .button-group, .button-group1 {
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button-group:hover, .button-group1:hover {
+      background-color: #555;
     }
 
     .product-card {
@@ -63,24 +99,10 @@
     }
 
     .product-card img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
       margin-bottom: 10px;
-    }
-    .button-group, .button-group1 {
-      padding: 10px;
-      border: none;
-      background-color: #333;
-      color: #fff;
-      cursor: pointer;
-      margin-right: 10px;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-    }
-    .button-group:hover, .button-group1:hover {
-      background-color: #555;
     }
 
     .product-card h2 {
@@ -110,32 +132,60 @@
       text-align: center;
     }
 
-    .social-media a {
+    .social-media a, .contact-us a {
       color: #fff;
       text-decoration: none;
       margin: 0 10px;
     }
-    .contact-us a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-      h2{text-size-adjust: 1px;
-    margin-right:750px;
-    }
-    .qr-codes-footer img {
-            width: 200px;
-            height: 250px;
-            margin: 0 10px;
-            margin-left: 1000px ;
-    }
+
     .social-media img, .contact-us img {
-            width: 80px;
-            height: 80px;
-            vertical-align: middle;
-            margin-right: 5px;
-            border-radius: 50%;
-        }
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+
+    .qr-codes-footer img {
+      width: 100px;
+      height: auto;
+      margin: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Adjust alignment */
+      }
+
+      .logo img {
+        max-width: 30px;
+        margin-right: 10px;
+      }
+
+      .logo h2 {
+        font-size: 1.2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 5px 0; /* Adjust spacing */
+      }
+
+      .social-media img, .contact-us img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .qr-codes-footer img {
+        width: 80px;
+      }
+    }
   </style>
   <link rel="icon" type="image/png" href="favicon.jpeg">
 </head>
@@ -143,8 +193,10 @@
   <header>
     <div class="logo">
       <img src="Logo.png" alt="Gize Gebeya logo">
-      <H2>GIZE GEBEYA</H2>
+      <h2>GIZE GEBEYA</h2>
     </div>
+    <br>
+    <br>
     <h1>Products</h1>
     <p>Choose Your Suitable Products</p>
   </header>
@@ -161,62 +213,37 @@
 
   <section>
     <div class="button-group">
-     Houses
-       <a href="https://gizegebeya.github.io/Gize-Gebeya-Houses/">
-        <button><img src="LUXURY HOUSE.jpg" >
-          <a href="https://gizegebeya.github.io/Gize-Gebeya-Houses/"></button>
+      <a href="https://gizegebeya.github.io/Gize-Gebeya-Houses/">
+        <img src="LUXURY HOUSE.jpg" alt="Luxury House">
       </a>
     </div>
     <div class="button-group1">
-      Cars
       <a href="https://gizegebeya.github.io/Gize-Gebeya-Cars/">
-        <button><img src="LUXURY CAR.jpg">
-          <a href="https://gizegebeya.github.io/Gize-Gebeya-Cars/"></button>
+        <img src="LUXURY CAR.jpg" alt="Luxury Car">
       </a>
     </div>
   </section>
-<!-- <section>
-    <div class="product-card">
-      <img src="product1.jpg" alt="Product 1">
-      <h2>Product 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <button>Add to Cart</button>
-    </div>
 
-    <div class="product-card">
-      <img src="product2.jpg" alt="Product 2">
-      <h2>Product 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <button>Add to Cart</button>
-    </div>
+  <footer>
+    <p>Contact us at: Phone: +251978906766 / +251973126041 | Email: gizegebeyacompany@gmail.com</p>
+    <section>
+      <div class="social-media">
+        <a href="#" class="social-icon"><img src="Youtube.png" alt="YouTube"></a>
+        <a href="https://www.tiktok.com/@gizegebeyasales?_r=1" class="social-icon"><img src="TIKTOK.png" alt="TIKTOK"></a>
+        <a href="#" class="social-icon"><img src="X.jpg" alt="X"></a>
+        <a href="https://www.instagram.com/gizegebeya?igsh=bnVqdHNseXdqNDg=" class="social-icon"><img src="INSTAGRAM.jpg" alt="instagram"></a>
+        <a href="https://www.facebook.com/profile.php?id=61550732175981" class="social-icon"><img src="FACEBOOK.png" alt="facebook"></a>
+        <a href="https://t.me/gizegebeyasale" class="social-icon"><img src="Telegram channel.jpg" alt="Telegram"></a>
+        <a href="mailto:gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
+        <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
+      </div>
+      <div class="qr-codes-footer">
+        <a href="https://gizegebeya.github.io/Gize-Gebeya-Customer-s-website/">
+          <img src="QR CODE FOR CUSTOMERS.png" alt="QR Code for Customers">
+        </a>
+      </div>
+    </section>
+  </footer>
 
-    <div class="product-card">
-      <img src="product3.jpg" alt="Product 3">
-      <h2>Product 3</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <button>Add to Cart</button>
-    </div>
-  </section>
--->
-<footer>
-  <p>Contact us at: Phone: +251978906766/+251973126041 | Email: gizegebeyacompany@gmail.com</p>
-  <section>
-    <div class="social-media">
-      <a href="#" class="social-icon"><img src="Youtube.png" alt="YouTube"></a>
-      <a href="https://www.tiktok.com/@gizegebeyasales?_r=1" class="social-icon"><img src="TIKTOK.png" alt="TIKTOK"></a>
-      <a href="#" class="social-icon"><img src="X.jpg" alt="X"></a>
-      <a href="https://www.instagram.com/gizegebeya?igsh=bnVqdHNseXdqNDg=" class="social-icon"><img src="INSTAGRAM.jpg" alt="instagram"></a>
-      <a href="https://www.facebook.com/profile.php?id=61550732175981" class="social-icon"><img src="FACEBOOK.png" alt="facebook"></a>
-      <a href="https://t.me/gizegebeyasale" class="social-icon"><img src="Telegram channel.jpg" alt="Telegram"></a>
- 
-    <a href="gizegebeyacompany@gmail.com" class="social-icon"><img src="GMAIL.png" alt="gmail"></a>
-    <a href="https://t.me/gizegebeyacompany" class="social-icon"><img src="Telegram.jpg" alt="TELEGRAM"></a>
-  </div>
-  <div class="qr-codes-footer">
-      <a href="https://gizegebeya.github.io/Gize-Gebeya-Customer-s-website/">
-      <img src="QR CODE FOR CUSTOMERS.png" alt="qrcodeforcustomers"></a>
-  </div>
-  </section>
-</footer>
 </body>
 </html>
